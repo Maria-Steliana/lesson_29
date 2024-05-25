@@ -1,0 +1,24 @@
+table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background-color: green;
+}
+th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            background-color: #F9F9F9;
+}
+th {
+            background-color: #A6E4E7;
+}
+
+th:hover {
+    background-color: #8F8787;
+}
+
+td:hover {
+    background-color: #EBCBAE;
+}
+
