@@ -2,10 +2,11 @@
 <html>
 <head>
     <title> Emag Products </title>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='css/home_style.css')}}">
 </head>
 <body>
-    <h1 style="text-align: center;">Available Products</h1>
+    <h1 style="text-align: center; color: black;" onclick="firstFunction()" id="titleId">Available Products</h1>
     <table>
         <tr>
             <th>Name</th>
@@ -20,5 +21,24 @@
         </tr>
         {% endfor %}
     </table>
+    <form action="/log_out" method="GET">
+        <button type="submit"> Delogheaza </button>
+    </form>
+<button onclick="display_add_product_form()" id="button2" style="display: block"> ADD Product </button> <br>
+    <br>
+    <br>
+<form id="add_product" action="/add_products" style="display: none" method="post">
+    <label for="product_name"> Product name: </label>
+    <input type="text" id="product_name" name="product_name" required> <br>
+
+    <label for="store"> Store: </label>
+    <input type="text" id="store" name="store" required> <br>
+
+    <label for="price"> Price: </label>
+    <input type="text" id="price" name="price" required> <br>
+
+    <button type="submit" id="send"> Send </button>
+</form>
+<img src="https://about.emag.ro/wp-content/uploads/2023/11/MicrosoftTeams-image-24.png" alt="Emag logo" id="logo_img_id">
 </body>
 </html>
